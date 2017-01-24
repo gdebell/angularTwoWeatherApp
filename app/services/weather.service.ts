@@ -9,7 +9,7 @@ export class WeatherService {
   }
 
   getWeather () {
-    return this.http.get('http://api.openweathermap.org/data/2.5/weather?q=Denver&appid=f6187afd9079bcd2d16808655aca0eb1')
+    return this.http.get('http://api.openweathermap.org/data/2.5/weather?q=Denver&units=imperial&appid=f6187afd9079bcd2d16808655aca0eb1')
       .map(res => res.json());
   }
 }
