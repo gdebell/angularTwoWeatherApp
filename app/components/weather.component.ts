@@ -16,12 +16,15 @@ export class WeatherComponent  {
   description: string;
   icon: string;
   news: string[];
+  date: number = Date.now();
+
 
   constructor(private weatherService: WeatherService) {
     // console.log('Constructor ran!!');
+    console.log(this.date);
+
     this.name = 'Gina',
     this.email = 'gdebell@gmail.com'
-    this.date = new Date();
 
     this.weatherService.getWeather().subscribe(posts => {
       this.city = posts.name;
@@ -31,8 +34,8 @@ export class WeatherComponent  {
     })
 
     this.weatherService.getNews().subscribe(posts => {
-      this. news = posts.articles;
+      this.news = posts.articles;
     })
-
   }
+
 }

@@ -1,9 +1,12 @@
 <div class="container">
-  <h1>Hello {{name}}</h1>
+  <p>Hello {{name}}</p>
+  <p>{{ date | date: 'EEEE'}}  </p>
+  <p> {{ date | date: 'MMMM' }} </p>
+  <p>{{ date | date: 'dd'}} </p>
   <p> {{ temp }} º F </p>
-    <p> {{ city }} </p>
+  <p> {{ city }} </p>
+
   <img src="{{ icon }}" alt="weather icon" height="100" width="100">
-  <h3>{{date | date: 'MM'}}/{{date | date:'dd'}}/{{date | date: 'yyyy'}}</h3>
-  <h3>{{ date | date: 'jm' }}</h3>
+
   <ul><li *ngFor="let headline of news">{{ headline.description }}</li></ul>
 </div>
