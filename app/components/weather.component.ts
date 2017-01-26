@@ -21,6 +21,7 @@ export class WeatherComponent  {
     // console.log('Constructor ran!!');
     this.name = 'Gina',
     this.email = 'gdebell@gmail.com'
+    this.date = new Date();
 
     this.weatherService.getWeather().subscribe(posts => {
       this.city = posts.name;
