@@ -8,6 +8,7 @@ import { WeatherService } from '../services/weather.service';
   providers: [WeatherService]
 })
 
+
 export class WeatherComponent  {
   name: string;
   email: string;
@@ -18,11 +19,9 @@ export class WeatherComponent  {
   news: string[];
   date: number = Date.now();
 
-
   constructor(private weatherService: WeatherService) {
-    // console.log('Constructor ran!!');
+    console.log('Constructor ran!!');
     console.log(this.date);
-
     this.name = 'Gina',
     this.email = 'gdebell@gmail.com'
 
@@ -36,6 +35,7 @@ export class WeatherComponent  {
     this.weatherService.getNews().subscribe(posts => {
       this.news = posts.articles;
     })
+
   }
 
 }

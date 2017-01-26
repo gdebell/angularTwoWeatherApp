@@ -2,15 +2,10 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-
-
-
-
 @Injectable()
 export class WeatherService {
   constructor(private http: Http) {
     console.log('Weather service initialized');
-    // setTimeout( "refresh()",1000 );
     setInterval(function(){
         location.reload();
         console.log("logging every 5 seconds");
@@ -27,4 +22,7 @@ export class WeatherService {
       .map(res => res.json());
   }
 
+  convertTime () {
+    return Date.now();
+  }
 }
