@@ -18,7 +18,7 @@ export class WeatherComponent  {
   news: string[];
 
   constructor(private weatherService: WeatherService) {
-    console.log('Constructor ran!!');
+    // console.log('Constructor ran!!');
     this.name = 'Gina',
     this.email = 'gdebell@gmail.com'
 
