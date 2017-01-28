@@ -31,7 +31,7 @@ export class WeatherComponent  {
     this.weatherService.getWeather().subscribe(posts => {
       console.log(posts);
       this.city = posts.name;
-      this.temp = posts.main.temp;
+      this.temp = parseInt(posts.main.temp);
       this.description = posts.weather[0].main;
       this.icon = 'http://openweathermap.org/img/w/' + posts.weather[0].icon  + '.png';
     })
